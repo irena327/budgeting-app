@@ -1,0 +1,72 @@
+.navbar-nav {
+   -webkit-flex-direction: row;
+   -ms-flex-direction: row;
+   flex-direction: row;
+ }
+ 
+ .color-nav {
+   background-color: #b3c8d3;
+   font-weight: 600;
+   font-size: 17px;
+   font-family: 'Quicksand', sans-serif;
+ }
+ 
+ .navbrand {
+   font-size: 24px;
+   font-weight: 700;
+   font-family: 'EB Garamond', serif;
+ }
+ 
+ .logo {
+    height: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    float: left;
+ }
+ 
+ .content {
+    padding-top: 30px;
+ }
+ 
+ .ant-layout{
+   background: #efefef;
+ }
+
+ .menuBar {
+  padding: 0 20px;
+  border-bottom: solid 1px #e8e8e8;
+}
+
+ .menuCon {
+  background-color: #b3c8d3;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'EB Garamond', serif;
+  width: calc(100% - 50px);
+  float: left;
+}
+
+.menuCon .ant-menu-horizontal {
+  background-color: #b3c8d3;
+  border-bottom: none;
+}
+
+.menuCon .leftMenu {
+  background-color: #b3c8d3;
+  width: calc(100% - 250px);
+  float: left;
+}
+
+.menuCon .rightMenu {
+  background-color: #b3c8d3;
+  float: right;
+}
+
+.style {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'EB Garamond', serif;
+  color: #ffffff;
+  background-color: #b3c8d3;
+}

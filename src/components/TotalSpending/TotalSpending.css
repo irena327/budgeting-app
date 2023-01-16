@@ -1,0 +1,15 @@
+.header {
+   text-align: center;
+   color: #000000;
+   font-weight: 700;
+   font-size: 40px;
+   font-family: 'EB Garamond', serif;
+}
+
+.amount {
+   text-align: center;
+   color: #b3c8d3;
+   font-weight: 400;
+   font-size: 72px;
+   font-family: 'Quicksand', sans-serif;
+}

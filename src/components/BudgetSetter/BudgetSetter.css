@@ -1,0 +1,25 @@
+.title {
+   text-align: center;
+   color: #000000;
+   font-weight: 700;
+   font-size: 18px;
+   margin-bottom: 10%;
+   font-family: 'EB Garamond', serif;
+}
+
+.category {
+   text-align: left;
+   color: #000000;
+   font-weight: 600;
+   font-size: 14px;
+   font-family: 'Quicksand', sans-serif;
+}
+
+.total {
+   text-align: center;
+   color: #000000;
+   font-weight: 700;
+   font-size: 16px;
+   margin-top: 10%;
+   font-family: 'EB Garamond', serif;
+}

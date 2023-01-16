@@ -1,0 +1,33 @@
+/* @import "~antd/dist/antd.css"; */
+
+.App {
+  text-align: center;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #efefef;
+  background-size: cover;
+  color: #000000;
+}
+
+.ant-btn-primary {
+  background-color: #b3c8d3;
+}
+
+.ant-btn-primary:hover {
+  background-color: #c9dae4 !important;
+}
+
+.ant-btn-default:hover {
+  border-color: #c9dae4 !important;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  background: #efefef;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+}

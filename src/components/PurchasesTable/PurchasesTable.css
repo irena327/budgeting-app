@@ -1,0 +1,15 @@
+.ant-table-thead > tr > th{
+   color: #ffffff;
+   background: #b3c8d3 !important;
+ }
+
+ .ant-table table {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   border-color: #b3c8d3;
+ }
+
+ .ant-table filter {
+  color: #95c5df;
+}

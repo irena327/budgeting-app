@@ -1,0 +1,99 @@
+/* LoginForm Component CSS */
+.LoginForm {
+   text-align: Center;
+   color: black;
+   font-size: 20px;
+   font-weight: 600;
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 2%;
+   font-family: 'Quicksand', sans-serif;
+ }
+
+ /* .Header {
+   text-align: left;
+   color: black;
+   font-size: 20px;
+   font-weight: 700;
+   margin-top: 3%;
+   font-family: 'EB Garamond', serif;
+ } */
+
+ .Header {
+   text-align: center;
+   color: #000000;
+   font-weight: 700;
+   font-size: 48px;
+   margin-bottom: 3%;
+   font-family: 'EB Garamond', serif;
+ }
+
+ .site-layout-content {
+   min-height: 280px;
+   background: #efefef;
+   background-size: cover;
+   font-size: 22px;
+   font-weight: 400;
+   font-family: 'Quicksand', sans-serif;
+ }
+
+ .ForgotPassword {
+   text-decoration: underline;
+   display: "inline-block";
+   text-align: right;
+   font-weight: 400;
+   font-size: 14px;
+   color: #000000;
+   font-family: 'Quicksand', sans-serif;
+   ;
+ }
+ 
+ .ForgotPassword:hover {
+   text-decoration: underline;
+   display: "inline-block";
+   text-align: right;
+   font-weight: 400;
+   font-size: 14px;
+   color: #b3c8d3;
+   font-family: 'Quicksand', sans-serif;
+   ;
+ }
+
+ .SignUp {
+   text-decoration: underline;
+   display: "inline-block";
+   text-align: center;
+   font-weight: 400;
+   font-size: 14px;
+   color: #000000;
+   font-family: 'Quicksand', sans-serif;
+   ;
+ }
+ 
+ .SignUp:hover {
+   text-decoration: underline;
+   display: "inline-block";
+   text-align: center;
+   font-weight: 400;
+   font-size: 14px;
+   color: #b3c8d3;
+   font-family: 'Quicksand', sans-serif;
+   ;
+ }
+
+ .SubmitFormButton {
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+ }
+
+ .Form {
+   /* border-color: #b3c8d3; */
+   font-family: 'Quicksand', sans-serif;
+ }
+
+ .ant-form-item-label > label {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   border-color: #b3c8d3;
+}
