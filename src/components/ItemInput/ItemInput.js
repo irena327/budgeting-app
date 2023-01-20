@@ -1,7 +1,6 @@
-import React, { useEffect, useState }  from 'react';
+import React from 'react';
 import { db } from '../../firebase';
 import { Button, Form, Input, Select } from 'antd';
-import { auth } from './../../firebase';
 import "./ItemInput.css";
 
 const { Option } = Select;
@@ -22,6 +21,7 @@ const tailLayout = {
 
 const ItemInput = ({ month, year, data, setData, user }) => {
   const [form] = Form.useForm();
+
   const onCategoryChange = (value) => {
     switch (value) {
       case 'Groceries':
@@ -76,6 +76,8 @@ const ItemInput = ({ month, year, data, setData, user }) => {
     const newValues = {...values, month, year, date, id};
     db.collection("purchase").add(newValues);
     setData([...data, newValues]);
+    console.log(values);
+    form.resetFields();
   };
 
   const onReset = () => {
