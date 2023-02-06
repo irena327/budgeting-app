@@ -11,19 +11,57 @@ const PurchasesTable = ({ data, setData, user }) => {
          title: "Purchase",
          dataIndex: "Item",
          key: "Item",
-         width: "25%",
+         width: "20%",
       },
       {
          title: "Cost ($)",
          dataIndex: "Cost",
          key: "Cost",
          render: (text) => "$" + parseFloat(text).toFixed(2),
-         width: "25%",
+         width: "20%",
       },
       {
          title: "Category",
          dataIndex: "Category",
          key: "Category",
+         filters: [
+            {
+               text: 'Food & Drinks',
+               value: 'Food & Drinks',
+            },
+            {
+               text: 'Gifts',
+               value: 'Gifts',
+            },
+            {
+               text: 'Attractions',
+               value: 'Attractions',
+            },
+            {
+               text: 'Transportation',
+               value: 'Transportation',
+            },
+            {
+               text: 'Hotels',
+               value: 'Hotels',
+            },
+            {
+               text: 'Flights',
+               value: 'Flights',
+            },
+            {
+               text: 'Other',
+               value: 'Other',
+            },
+         ],
+         onFilter: (value, record) => record.Category.indexOf(value) === 0,
+         filterIcon: filtered => <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />,
+         width: "20%",
+      },
+      {
+         title: "City",
+         dataIndex: "City",
+         key: "City",
          filters: [
             {
                text: 'Tokyo',
@@ -46,9 +84,9 @@ const PurchasesTable = ({ data, setData, user }) => {
                value: 'Taipei',
             },
          ],
-         onFilter: (value, record) => record.Category.indexOf(value) === 0,
+         onFilter: (value, record) => record.City.indexOf(value) === 0,
          filterIcon: filtered => <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />,
-         width: "25%",
+         width: "20%",
       },
       {
          title: "Date",
@@ -56,7 +94,7 @@ const PurchasesTable = ({ data, setData, user }) => {
          key: "date",
          defaultSortOrder: 'descend',
          sorter: (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-         width: "25%",
+         width: "20%",
       },
       {
          title: "Actions",
@@ -77,7 +115,7 @@ const PurchasesTable = ({ data, setData, user }) => {
       e.preventDefault();
       const newData = data.filter(item => item.date !== date);
       setData(newData);
-      var deleteItem = db.collection('purchase').where('date', '==', date);
+      var deleteItem = db.collection('asia').where('date', '==', date);
       deleteItem.get().then(function (querySnapshot) {
          querySnapshot.forEach(function (doc) {
             doc.ref.delete();

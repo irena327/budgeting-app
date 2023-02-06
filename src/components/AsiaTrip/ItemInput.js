@@ -19,10 +19,51 @@ const tailLayout = {
   },
 };
 
-const ItemInput = ({ month, year, data, setData, user }) => {
+const ItemInput = ({ data, setData, user }) => {
   const [form] = Form.useForm();
 
   const onCategoryChange = (value) => {
+    switch (value) {
+      case 'Food & Drinks':
+        form.setFieldsValue({
+          note: 'Food & Drinks',
+        });
+        return;
+      case 'Gifts':
+        form.setFieldsValue({
+          note: 'Gifts',
+        });
+        return;
+      case 'Attractions':
+        form.setFieldsValue({
+          note: 'Attractions',
+        });
+        return;
+      case 'Transportation':
+        form.setFieldsValue({
+          note: 'Transportation',
+        });
+        return;
+      case 'Hotels':
+        form.setFieldsValue({
+          note: 'Hotels',
+        });
+        return;
+      case 'Flights':
+        form.setFieldsValue({
+          note: 'Flights',
+        });
+        return;
+      case 'Other':
+        form.setFieldsValue({
+          note: 'Other',
+        });
+        break;
+      default:
+    }
+  };
+
+  const onLocationChange = (value) => {
     switch (value) {
       case 'Tokyo':
         form.setFieldsValue({
@@ -58,8 +99,8 @@ const ItemInput = ({ month, year, data, setData, user }) => {
     const date = new Date().toISOString();
     const id = user.email;
     console.log("id: " + id);
-    const newValues = {...values, month, year, date, id};
-    db.collection("purchase").add(newValues);
+    const newValues = {...values, date, id};
+    db.collection("asia").add(newValues);
     setData([...data, newValues]);
     console.log(values);
     form.resetFields();
@@ -102,13 +143,37 @@ const ItemInput = ({ month, year, data, setData, user }) => {
         rules={[
           {
             required: true,
+            message: "Category must be selected",
+          },
+        ]}
+      >
+        <Select
+          placeholder="Select a category"
+          onChange={onCategoryChange}
+          allowClear
+        >
+          <Option value="Food & Drinks">Food & Drinks</Option>
+          <Option value="Gifts">Gifts</Option>
+          <Option value="Attractions">Attractions</Option>
+          <Option value="Transportation">Transportation</Option>
+          <Option value="Hotels">Hotels</Option>
+          <Option value="Flights">Flights</Option>
+          <Option value="Other">Other</Option>
+        </Select>
+      </Form.Item>
+      <Form.Item
+        name="City"
+        label="City"
+        rules={[
+          {
+            required: true,
             message: "City must be selected",
           },
         ]}
       >
         <Select
           placeholder="Select a city"
-          onChange={onCategoryChange}
+          onChange={onLocationChange}
           allowClear
         >
           <Option value="Tokyo">Tokyo, Japan</Option>

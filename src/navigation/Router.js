@@ -38,7 +38,7 @@ const Router = () => {
             <Route exact path='/2023/October' render={(props) => <MonthlyTracking {...props} month={"October"} year={"2023"} />} />
             <Route exact path='/2023/November' render={(props) => <MonthlyTracking {...props} month={"November"} year={"2023"} />} />
             <Route exact path='/2023/December' render={(props) => <MonthlyTracking {...props} month={"December"} year={"2023"} />} />
-            <Route exact path='/asiatrip' render={(props) => <AsiaTrip {...props} month={"Asia"} year={"2023"} />} />
+            <Route exact path='/asiatrip' render={(props) => <AsiaTrip/>} />
             <Route exact path='/home' component={Home} />
             <Route component={NotFound} />
           </Switch>

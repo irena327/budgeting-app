@@ -2,7 +2,7 @@ import React from "react";
 import { Chart } from "react-google-charts";
 
 export const options = {
-   title: "Budget Tracker",
+   title: "Spending by Category ($)",
    vAxis: {format: '$#,###.##'},
    backgroundColor: '#efefef',
    fontName: 'Quicksand',
@@ -11,17 +11,17 @@ export const options = {
    legend:'top',
  };
 
-const BarChart = ({ data }) => {
-   const colors = ['#f0bbad', '#cecef5', '#adae8f', '#cf8477', '#7986CB'];
+const ByCategory = ({ data }) => {
+   const colors = ['#e9ccb1', '#d3c4be', '#e4dac2', '#f4eee1', '#c4bdac', '#ebcfc4', '#e8e6d9'];
    // sum all purchases by location
-   const map = new Map([["Tokyo", 0], ["Kyoto", 0], ["Seoul", 0], ["Jeju Island", 0],
-                        ["Taipei", 0]]);
+   const map = new Map([["Food & Drinks", 0], ["Gifts", 0], ["Attractions", 0], ["Transportation", 0],
+                        ["Hotels", 0], ["Flights", 0], ["Other", 0]]);
    for (let i = 0; i < data.length; i++) {
       map.set(data[i].Category, map.get(data[i].Category) + Number(data[i].Cost));
    }
 
    // create new array of data
-   const displayData = [["Location", "", { role: "style" }]];
+   const displayData = [["Category", "", { role: "style" }]];
    let i = 0;
    for (let key of map.keys()) {
       const row = [key, map.get(key), colors[i]];
@@ -40,4 +40,4 @@ const BarChart = ({ data }) => {
   );
 }
 
-export default BarChart;
+export default ByCategory;

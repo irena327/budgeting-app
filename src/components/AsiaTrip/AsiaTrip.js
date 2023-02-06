@@ -5,12 +5,12 @@ import ItemInput from "./ItemInput";
 import PurchasesTable from "./PurchasesTable";
 import { db, auth } from '../../firebase';
 import "./../MonthlyTracking/MonthlyTracking.css";
-import PieChart from "./PieChart";
-import BarChart from "./BarChart";
+import ByLocation from "./ByLocation";
+import ByCategory from "./ByCategory";
 import TotalSpending from "../TotalSpending/TotalSpending";
 import daisy from './../../daisy.png'
 
-function AsiaTrip({ month, year }) {
+function AsiaTrip() {
     const history = useHistory();
     const [user, setUser] = useState("");
     const [userDataFetched, setUserDataFetched] = useState(false);
@@ -24,8 +24,7 @@ function AsiaTrip({ month, year }) {
         }
         console.log("id: " + user.email);
         const id = user.email;
-        db.collection("purchase").where("id", "==", id).where("month", "==", month).where("year", "==", year)
-        .get()
+        db.collection("asia").where("id", "==", id).get()
         .then((querySnapshot) => {
            const newData = [];
            querySnapshot.forEach((doc) => {
@@ -67,9 +66,9 @@ function AsiaTrip({ month, year }) {
                         height="40"
                     />
                 </Col>
-                <Col span={6}>
+                <Col span={10}>
                     <h1 className="Header">
-                        { month } { year }
+                        Asia Senior Trip 2023
                     </h1>
                 </Col>
                 <Col span={2}>
@@ -83,18 +82,18 @@ function AsiaTrip({ month, year }) {
             </Row>
             <Row justify="center" align="top">
                 <Col span={12}>
-                    <ItemInput month={ month } year={ year } data={ data } setData={ setData } user={ user }/>
+                    <ItemInput data={ data } setData={ setData } user={ user }/>
                 </Col>
                 <Col span={12}>
                     <TotalSpending data={ data }/>
                 </Col>
             </Row>
             <Row justify="center" align="middle" className="rowPadding">
-                <Col span={12}>
-                    <BarChart data={ data }/>
+                <Col span={14}>
+                    <ByCategory data={ data }/>
                 </Col>
-                <Col span={12}>
-                    <PieChart data={ data }/>
+                <Col span={10}>
+                    <ByLocation data={ data }/>
                 </Col>
             </Row>
             <Row align="middle">

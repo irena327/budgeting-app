@@ -92,10 +92,8 @@ const MonthlyOverview = () => {
    // parse through data once and unpdate categories
    for (let i = 0; i < data.length; i++) {
       const m = data[i].month;
-      if (m !== "Asia") {
-         map.get(m).set(data[i].Category, map.get(m).get(data[i].Category) + Number(data[i].Cost));
-         months.set(m, months.get(m) + Number(data[i].Cost));
-      }
+      map.get(m).set(data[i].Category, map.get(m).get(data[i].Category) + Number(data[i].Cost));
+      months.set(m, months.get(m) + Number(data[i].Cost));
    }
 
    // build expenses for each month
