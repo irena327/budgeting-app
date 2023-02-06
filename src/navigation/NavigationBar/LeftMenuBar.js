@@ -95,6 +95,9 @@ class LeftMenuBar extends Component {
             <a style={{ textDecoration: "none" }} href="/2024/december">December</a> 
          </Menu.Item>
         </SubMenu>
+      <Menu.Item key="asia">
+         <a style={{ textDecoration: "none" }} href="/asiatrip">Asia Trip 2023</a>
+      </Menu.Item>
       </Menu>
     );
   }
