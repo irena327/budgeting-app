@@ -15,9 +15,9 @@ const signOut = e => {
 class RightMenuBar extends Component {
   render() {
     return (
-      <Menu mode="horizontal" className="style" style={{minWidth: '50px'}}>
-        <Menu.Item key="signout">
-          <a style={{ textDecoration: "none" }} href="/" onClick={ signOut } >Sign Out</a>
+      <Menu mode="horizontal" className="style" style={{ disabledOverflow: true }}>
+        <Menu.Item key="signout" style={{ disabledOverflow: true }}>
+          <a style={{ textDecoration: "none", disabledOverflow: true }} href="/" onClick={ signOut } >Sign Out</a>
         </Menu.Item>
       </Menu>
     );
