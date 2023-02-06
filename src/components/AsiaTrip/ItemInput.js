@@ -39,7 +39,7 @@ const ItemInput = ({ month, year, data, setData, user }) => {
           note: 'Seoul',
         });
         return;
-      case 'Jeju':
+      case 'Jeju Island':
         form.setFieldsValue({
           note: 'Jeju',
         });
@@ -114,7 +114,7 @@ const ItemInput = ({ month, year, data, setData, user }) => {
           <Option value="Tokyo">Tokyo, Japan</Option>
           <Option value="Kyoto">Kyoto, Japan</Option>
           <Option value="Seoul">Seoul, Korea</Option>
-          <Option value="Jeju">Jeju Island, Korea</Option>
+          <Option value="Jeju Island">Jeju Island, Korea</Option>
           <Option value="Taipei">Taipei, Taiwan</Option>
         </Select>
       </Form.Item>

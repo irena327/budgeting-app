@@ -8,7 +8,7 @@ export const options = {
   fontSize: '14',
   pieHole: 0.3,
   is3D: false,
-  colors: ['#b3c8d3', '#f0bbad', '#adae8f', '#cf8477', '#95c5df'],
+  colors: ['#f0bbad', '#cecef5', '#adae8f', '#cf8477', '#7986CB'],
 };
 
 const PieChart = ({ data }) => {

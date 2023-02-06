@@ -12,7 +12,7 @@ export const options = {
  };
 
 const BarChart = ({ data }) => {
-   const colors = ['#b3c8d3', '#f0bbad', '#adae8f', '#cf8477', '#95c5df'];
+   const colors = ['#f0bbad', '#cecef5', '#adae8f', '#cf8477', '#7986CB'];
    // sum all purchases by location
    const map = new Map([["Tokyo", 0], ["Kyoto", 0], ["Seoul", 0], ["Jeju Island", 0],
                         ["Taipei", 0]]);
