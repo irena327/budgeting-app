@@ -17,7 +17,8 @@ const MonthlyOverview = ({ year }) => {
       fontName: 'Quicksand',
       fontSize: '14',
       is3D: false,
-      colors: ['#ff470a', '#b3c8d3', '#f0bbad', '#adae8f', '#cf8477', '#95c5df', '#f6d060', '#7986CB', '#cecef5'],
+      colors: ['#ff470a', '#b3c8d3', '#f0bbad', '#adae8f', '#cf8477', '#95c5df', '#f6d060', '#7986CB', 
+               '#cecef5', '#809bce', '#95b8d1', '#b8e0d2', '#e8d1c5', '#eac4d5'],
    };
 
    // fetches data from firestore
