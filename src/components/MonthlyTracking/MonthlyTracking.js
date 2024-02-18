@@ -17,7 +17,7 @@ function MonthlyTracking({ month, year }) {
     const [userDataFetched, setUserDataFetched] = useState(false);
     const [data, setData] = useState([]);
     const dataFetchedRef = useRef(false);
-    const [budgets, setBudgets] = useState([500, 500, 500, 500, 500, 500, 500, 500]);
+    const [budgets, setBudgets] = useState([3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000, 3000]);
 
     // fetches data from firestore at start
     const getData = () => {
@@ -106,15 +106,15 @@ function MonthlyTracking({ month, year }) {
                 </Col>
             </Row>
             <Row justify="center" align="middle" className="rowPadding">
-                <Col span={9}>
+                <Col span={14}>
                     <BarChart data={ data } budgets={ budgets }/>
                 </Col>
-                <Col span={7}>
+                <Col span={10}>
                     <BudgetSetter budgets={ budgets } setBudgets={ setBudgets }/>
                 </Col>
-                <Col span={8}>
+                {/* <Col span={8}>
                     <PieChart data={ data }/>
-                </Col>
+                </Col> */}
             </Row>
             <Row align="middle">
                 <Col span={24}>

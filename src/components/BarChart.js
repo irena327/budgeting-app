@@ -12,14 +12,20 @@ export const options = {
  };
 
 const BarChart = ({ data, budgets }) => {
-   const colors = ['#b3c8d3', '#f0bbad', '#adae8f', '#cf8477', '#95c5df', '#f6d060', '#7986CB', '#cecef5'];
+   // const colors = ['#b3c8d3', '#f0bbad', '#adae8f', '#cf8477', '#95c5df', '#f6d060', '#7986CB', '#cecef5'];
    const ranges = ['#adae8f', '#e9cb72', '#cf8477', '#bd4646'];
    // sum all purchases by category
-   const map = new Map([["Groceries", 0], ["Dining", 0], ["Drinks & Snacks", 0], ["Shopping", 0],
-                        ["Health & Beauty", 0], ["Entertainment", 0], ["Travel", 0], ["Other", 0]]);
-   for (let i = 0; i < data.length; i++) {
-      map.set(data[i].Category, map.get(data[i].Category) + Number(data[i].Cost));
-   }
+   const map = new Map([["Housing", 0], ["Groceries", 0], ["Dining", 0], ["Uber Eats", 0], ["Alcohol", 0], ["Drinks & Snacks", 0], ["Shopping", 0],
+                        ["Health & Beauty", 0], ["Entertainment", 0], ["Travel", 0], ["Transportation", 0], ["Significant Other", 0], ["Other", 0]]);
+   // for (let i = 0; i < data.length; i++) {
+   //    map.set(data[i].Category, map.get(data[i].Category) + Number(data[i].Cost));
+   // }
+
+   for (let expense of data) {
+      for (let category of expense.Category) {
+         map.set(category, map.get(category) + Number(expense.Cost));
+      }
+    }
 
    // create new array of data
    const displayData = [["Category", "0-50% = Green, 51-75% = Yellow, 76-100% = Pink, >100% = Red", { role: "style" }]];

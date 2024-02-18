@@ -40,7 +40,7 @@ const DecimalStep = ({ budgets, setBudgets, index }) => {
       <Col span={12}>
         <Slider
           min={0}
-          max={500}
+          max={3000}
           onChange={onChange}
           value={typeof val === 'number' ? val : 0}
           step={0.01}
@@ -49,7 +49,7 @@ const DecimalStep = ({ budgets, setBudgets, index }) => {
       <Col span={4}>
         <InputNumber
           min={0}
-          max={500}
+          max={3000}
           style={{
             margin: '0 16px',
           }}
@@ -81,7 +81,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Groceries:
+                  Housing:
                </h2>
             </Col>
             <Col span={12}>
@@ -91,7 +91,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Dining:
+                  Groceries:
                </h2>
             </Col>
             <Col span={12}>
@@ -101,7 +101,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Drinks & Snacks:
+                  Dining:
                </h2>
             </Col>
             <Col span={12}>
@@ -111,7 +111,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Shopping:
+                  Uber Eats:
                </h2>
             </Col>
             <Col span={12}>
@@ -121,7 +121,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Health & Beauty:
+                  Alcohol:
                </h2>
             </Col>
             <Col span={12}>
@@ -131,7 +131,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Entertainment:
+                  Drinks & Snacks:
                </h2>
             </Col>
             <Col span={12}>
@@ -141,7 +141,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Travel:
+                  Shopping:
                </h2>
             </Col>
             <Col span={12}>
@@ -151,11 +151,61 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Other:
+                  Health & Beauty:
                </h2>
             </Col>
             <Col span={12}>
                <DecimalStep budgets={ budgets } setBudgets={ setBudgets } index={ 7 } email={ email }/>
+            </Col>
+         </Row>
+         <Row justify="center" align="middle">
+            <Col span={6}>
+               <h2 className="category">
+                  Entertainment:
+               </h2>
+            </Col>
+            <Col span={12}>
+               <DecimalStep budgets={ budgets } setBudgets={ setBudgets } index={ 8 } email={ email }/>
+            </Col>
+         </Row>
+         <Row justify="center" align="middle">
+            <Col span={6}>
+               <h2 className="category">
+                  Travel:
+               </h2>
+            </Col>
+            <Col span={12}>
+               <DecimalStep budgets={ budgets } setBudgets={ setBudgets } index={ 9 } email={ email }/>
+            </Col>
+         </Row>
+         <Row justify="center" align="middle">
+            <Col span={6}>
+               <h2 className="category">
+                  Transportation:
+               </h2>
+            </Col>
+            <Col span={12}>
+               <DecimalStep budgets={ budgets } setBudgets={ setBudgets } index={ 10 } email={ email }/>
+            </Col>
+         </Row>
+         <Row justify="center" align="middle">
+            <Col span={6}>
+               <h2 className="category">
+                  Signficant Other:
+               </h2>
+            </Col>
+            <Col span={12}>
+               <DecimalStep budgets={ budgets } setBudgets={ setBudgets } index={ 11 } email={ email }/>
+            </Col>
+         </Row>
+         <Row justify="center" align="middle">
+            <Col span={6}>
+               <h2 className="category">
+                  Other:
+               </h2>
+            </Col>
+            <Col span={12}>
+               <DecimalStep budgets={ budgets } setBudgets={ setBudgets } index={ 12 } email={ email }/>
             </Col>
          </Row>
          <Row justify="center" align="middle">

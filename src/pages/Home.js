@@ -38,6 +38,11 @@ function Home() {
                     <MonthlyOverview />
                 </Col>
             </Row>
+            <Row>
+                <Col span={24}>
+                    <MonthlyOverview />
+                </Col>
+            </Row>
         </div>
     );
 }

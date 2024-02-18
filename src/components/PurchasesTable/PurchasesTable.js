@@ -24,7 +24,14 @@ const PurchasesTable = ({ data, setData, user }) => {
          title: "Category",
          dataIndex: "Category",
          key: "Category",
+         render: categories => (
+            <span>{categories.join(", ")}</span>
+          ),
          filters: [
+            {
+               text: 'Housing',
+               value: 'Housing',
+            },
             {
                text: 'Groceries',
                value: 'Groceries',
@@ -32,6 +39,14 @@ const PurchasesTable = ({ data, setData, user }) => {
             {
                text: 'Dining',
                value: 'Dining',
+            },
+            {
+               text: 'Uber Eats',
+               value: 'Uber Eats',
+            },
+            {
+               text: 'Alcohol',
+               value: 'Alcohol',
             },
             {
                text: 'Drinks & Snacks',
@@ -54,11 +69,19 @@ const PurchasesTable = ({ data, setData, user }) => {
                value: 'Travel',
             },
             {
+               text: 'Transportation',
+               value: 'Transportation',
+            },
+            {
+               text: 'Significant Other',
+               value: 'Significant Other',
+            },
+            {
                text: 'Other',
                value: 'Other',
             },
          ],
-         onFilter: (value, record) => record.Category.indexOf(value) === 0,
+         onFilter: (value, record) => record.Category.includes(value),
          filterIcon: filtered => <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />,
          width: "25%",
       },

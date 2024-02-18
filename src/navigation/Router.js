@@ -26,18 +26,18 @@ const Router = () => {
         <Route path="/" component={authComponent} exact />
         <Layout>
           <Switch>
-            <Route exact path='/2023/January' render={(props) => <MonthlyTracking {...props} month={"January"} year={"2023"} email={user}/>} />
-            <Route exact path='/2023/February' render={(props) => <MonthlyTracking {...props} month={"February"} year={"2023"} />} />
-            <Route exact path='/2023/March' render={(props) => <MonthlyTracking {...props} month={"March"} year={"2023"} />} />
-            <Route exact path='/2023/April' render={(props) => <MonthlyTracking {...props} month={"April"} year={"2023"} />} />
-            <Route exact path='/2023/May' render={(props) => <MonthlyTracking {...props} month={"May"} year={"2023"} />} />
-            <Route exact path='/2023/June' render={(props) => <MonthlyTracking {...props} month={"June"} year={"2023"} />} />
-            <Route exact path='/2023/July' render={(props) => <MonthlyTracking {...props} month={"July"} year={"2023"} />} />
-            <Route exact path='/2023/August' render={(props) => <MonthlyTracking {...props} month={"August"} year={"2023"} />} />
-            <Route exact path='/2023/September' render={(props) => <MonthlyTracking {...props} month={"September"} year={"2023"} />} />
-            <Route exact path='/2023/October' render={(props) => <MonthlyTracking {...props} month={"October"} year={"2023"} />} />
-            <Route exact path='/2023/November' render={(props) => <MonthlyTracking {...props} month={"November"} year={"2023"} />} />
-            <Route exact path='/2023/December' render={(props) => <MonthlyTracking {...props} month={"December"} year={"2023"} />} />
+            <Route exact path='/2024/January' render={(props) => <MonthlyTracking {...props} month={"January"} year={"2024"} email={user}/>} />
+            <Route exact path='/2024/February' render={(props) => <MonthlyTracking {...props} month={"February"} year={"2024"} />} />
+            <Route exact path='/2024/March' render={(props) => <MonthlyTracking {...props} month={"March"} year={"2024"} />} />
+            <Route exact path='/2024/April' render={(props) => <MonthlyTracking {...props} month={"April"} year={"2024"} />} />
+            <Route exact path='/2024/May' render={(props) => <MonthlyTracking {...props} month={"May"} year={"2024"} />} />
+            <Route exact path='/2024/June' render={(props) => <MonthlyTracking {...props} month={"June"} year={"2024"} />} />
+            <Route exact path='/2024/July' render={(props) => <MonthlyTracking {...props} month={"July"} year={"2024"} />} />
+            <Route exact path='/2024/August' render={(props) => <MonthlyTracking {...props} month={"August"} year={"2024"} />} />
+            <Route exact path='/2024/September' render={(props) => <MonthlyTracking {...props} month={"September"} year={"2024"} />} />
+            <Route exact path='/2024/October' render={(props) => <MonthlyTracking {...props} month={"October"} year={"2024"} />} />
+            <Route exact path='/2024/November' render={(props) => <MonthlyTracking {...props} month={"November"} year={"2024"} />} />
+            <Route exact path='/2024/December' render={(props) => <MonthlyTracking {...props} month={"December"} year={"2024"} />} />
             <Route exact path='/asiatrip' render={(props) => <AsiaTrip/>} />
             <Route exact path='/home' component={Home} />
             <Route component={NotFound} />

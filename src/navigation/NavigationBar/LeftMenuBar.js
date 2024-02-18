@@ -19,7 +19,7 @@ class LeftMenuBar extends Component {
         <Menu.Item key="home">
           <a style={{ textDecoration: "none" }} href="/home">Home</a>
         </Menu.Item>
-        <SubMenu title={<span>2023</span>}>
+        {/* <SubMenu title={<span>2023</span>}>
         <Menu.Item key="jan23">
             <a style={{ textDecoration: "none" }} href="/2023/january">January</a>
          </Menu.Item>
@@ -56,7 +56,7 @@ class LeftMenuBar extends Component {
          <Menu.Item key="dec23">
             <a style={{ textDecoration: "none" }} href="/2023/december">December</a> 
          </Menu.Item>
-        </SubMenu>
+        </SubMenu> */}
         <SubMenu title={<span>2024</span>}>
         <Menu.Item key="jan24">
             <a style={{ textDecoration: "none" }} href="/2024/january">January</a>
@@ -95,11 +95,11 @@ class LeftMenuBar extends Component {
             <a style={{ textDecoration: "none" }} href="/2024/december">December</a> 
          </Menu.Item>
         </SubMenu>
-        <SubMenu title={<span>Travel</span>}>
+        {/* <SubMenu title={<span>Travel</span>}>
          <Menu.Item key="asia">
             <a style={{ textDecoration: "none" }} href="/asiatrip">Asia Trip 2023</a>
          </Menu.Item>
-        </SubMenu>
+        </SubMenu> */}
       </Menu>
     );
   }

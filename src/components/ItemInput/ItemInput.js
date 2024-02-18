@@ -24,6 +24,11 @@ const ItemInput = ({ month, year, data, setData, user }) => {
 
   const onCategoryChange = (value) => {
     switch (value) {
+      case 'Housing':
+        form.setFieldsValue({
+          note: 'Housing Expense',
+        });
+        return;
       case 'Groceries':
         form.setFieldsValue({
           note: 'Grocery Purchase',
@@ -34,6 +39,16 @@ const ItemInput = ({ month, year, data, setData, user }) => {
           note: 'Dining Purchase',
         });
         return;
+      case 'Uber Eats':
+          form.setFieldsValue({
+            note: 'Uber Eats Purchase',
+          });
+          return;
+      case 'Alcohol':
+          form.setFieldsValue({
+            note: 'Alocohol Purchase',
+          });
+          return;
       case 'Drinks & Snacks':
         form.setFieldsValue({
           note: 'Drinks and Snacks Purchase',
@@ -57,6 +72,16 @@ const ItemInput = ({ month, year, data, setData, user }) => {
       case 'Travel':
         form.setFieldsValue({
           note: 'Travel Purchase',
+        });
+        return;
+      case 'Transportation':
+        form.setFieldsValue({
+          note: 'Transportation Purchase',
+        });
+        return;
+      case 'Significant Other':
+        form.setFieldsValue({
+          note: 'Significant Other Purchase',
         });
         return;
       case 'Other':
@@ -124,15 +149,21 @@ const ItemInput = ({ month, year, data, setData, user }) => {
         <Select
           placeholder="Select a category"
           onChange={onCategoryChange}
+          mode="multiple"
           allowClear
         >
+          <Option value="Housing">Housing</Option>
           <Option value="Groceries">Groceries</Option>
           <Option value="Dining">Dining</Option>
+          <Option value="Uber Eats">Uber Eats</Option>
+          <Option value="Alcohol">Alcohol</Option>
           <Option value="Drinks & Snacks">Drinks & Snacks</Option>
           <Option value="Shopping">Shopping</Option>
           <Option value="Health & Beauty">Health & Beauty</Option>
           <Option value="Entertainment">Entertainment</Option>
           <Option value="Travel">Travel</Option>
+          <Option value="Transportation">Transportation</Option>
+          <Option value="Significant Other">Significant Other</Option>
           <Option value="Other">Other</Option>
         </Select>
       </Form.Item>
