@@ -35,12 +35,12 @@ function Home() {
             </Row>
             <Row>
                 <Col span={24}>
-                    <MonthlyOverview />
+                    <MonthlyOverview year={ "2024" }/>
                 </Col>
             </Row>
             <Row>
                 <Col span={24}>
-                    <MonthlyOverview />
+                    <MonthlyOverview year={ "2025" }/>
                 </Col>
             </Row>
         </div>

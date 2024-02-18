@@ -38,6 +38,18 @@ const Router = () => {
             <Route exact path='/2024/October' render={(props) => <MonthlyTracking {...props} month={"October"} year={"2024"} />} />
             <Route exact path='/2024/November' render={(props) => <MonthlyTracking {...props} month={"November"} year={"2024"} />} />
             <Route exact path='/2024/December' render={(props) => <MonthlyTracking {...props} month={"December"} year={"2024"} />} />
+            <Route exact path='/2025/January' render={(props) => <MonthlyTracking {...props} month={"January"} year={"2025"} email={user}/>} />
+            <Route exact path='/2025/February' render={(props) => <MonthlyTracking {...props} month={"February"} year={"2025"} />} />
+            <Route exact path='/2025/March' render={(props) => <MonthlyTracking {...props} month={"March"} year={"2025"} />} />
+            <Route exact path='/2025/April' render={(props) => <MonthlyTracking {...props} month={"April"} year={"2025"} />} />
+            <Route exact path='/2025/May' render={(props) => <MonthlyTracking {...props} month={"May"} year={"2025"} />} />
+            <Route exact path='/2025/June' render={(props) => <MonthlyTracking {...props} month={"June"} year={"2025"} />} />
+            <Route exact path='/2025/July' render={(props) => <MonthlyTracking {...props} month={"July"} year={"2025"} />} />
+            <Route exact path='/2025/August' render={(props) => <MonthlyTracking {...props} month={"August"} year={"2025"} />} />
+            <Route exact path='/2025/September' render={(props) => <MonthlyTracking {...props} month={"September"} year={"2025"} />} />
+            <Route exact path='/2025/October' render={(props) => <MonthlyTracking {...props} month={"October"} year={"2025"} />} />
+            <Route exact path='/2025/November' render={(props) => <MonthlyTracking {...props} month={"November"} year={"2025"} />} />
+            <Route exact path='/2025/December' render={(props) => <MonthlyTracking {...props} month={"December"} year={"2025"} />} />
             <Route exact path='/asiatrip' render={(props) => <AsiaTrip/>} />
             <Route exact path='/home' component={Home} />
             <Route component={NotFound} />
