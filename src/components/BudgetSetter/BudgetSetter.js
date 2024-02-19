@@ -194,7 +194,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  **Signficant Other:
+                  **Significant Other:
                </h2>
             </Col>
             <Col span={12}>
