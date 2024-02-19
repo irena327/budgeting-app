@@ -65,7 +65,10 @@ const DecimalStep = ({ budgets, setBudgets, index }) => {
 const BudgetSetter = ({ budgets, setBudgets, email }) => {
    let total = 0;
    for (let i = 0; i < budgets.length; i++) {
-      total += budgets[i];
+      // Skip tracking uber eats and significant other in total budget because they are csubsets of other categories
+      if (i !== 3 && i !== 11) {
+         total += budgets[i];
+      }
    }
    total = total.toFixed(2);
 
@@ -111,7 +114,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Uber Eats:
+                  **Uber Eats:
                </h2>
             </Col>
             <Col span={12}>
@@ -191,7 +194,7 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <Col span={6}>
                <h2 className="category">
-                  Signficant Other:
+                  **Signficant Other:
                </h2>
             </Col>
             <Col span={12}>
@@ -211,6 +214,9 @@ const BudgetSetter = ({ budgets, setBudgets, email }) => {
          <Row justify="center" align="middle">
             <div className="total">
                Total Monthly Budget: ${ total }
+            </div>
+            <div>
+               ** categories are not counted towards total monthly budget
             </div>
          </Row>
       </div>
